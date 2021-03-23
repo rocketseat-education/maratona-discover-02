@@ -1,0 +1,53 @@
+#page-profile .page-header ~ .container {
+  display: flex;
+}
+
+aside.card {
+  background: var(--color-card-background);
+  color: var(--color-card-title);
+
+  border: 1px solid #E1E3E6;
+  border-radius: .313rem;
+
+  width: 22rem;
+
+  margin-right: 8rem;
+
+  text-align: center;
+
+  padding: 3.875rem 4.625rem;
+}
+
+aside img {
+  border-radius: 50%;
+
+  border: .25rem var(--color-secondary) solid;
+
+  width: 11.25rem;
+  height: 11.25rem;
+
+  margin-bottom: 1.5rem;
+}
+
+aside h2 {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.875rem;
+
+
+  margin-bottom: 3.875rem;
+}
+
+aside p {
+  margin-bottom: 1.75rem;
+
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.875rem;
+}
+
+main {
+  flex: 1;
+}

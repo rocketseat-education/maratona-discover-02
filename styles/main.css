@@ -1,0 +1,113 @@
+/* global remove user-agent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* custom vars */
+:root {
+  --color-background: #F0F2F5;
+  --color-text: #FCFDFF;
+
+  --color-primary: #41414C;
+  --color-secondary: #F1972C;
+  --color-secondary-hover: #FA9C2D;
+  
+  --color-input-background: #F8F8FC;
+  --color-button-text: #FFFFFF;
+  --color-hairline-in-dark: #4F4F5B;
+  --color-hairline-in-light: #E1E3E5;
+
+  --color-card-background: var(--color-text);
+  --color-card-title: #5A5A66;
+  --color-card-label: #BFBFCC;
+  --color-card-content: #787880;
+
+  --color-cancel: #E1E3E5;
+  --color-delete: #EB3B35; 
+  --color-save: #36B336;
+  
+  --color-badge-progress-text: var(--color-save);
+  --color-badge-progress-background: #E8F8E8;
+  --color-badge-done-text: var(--color-delete);
+  --color-badge-done-background:#FAECEB;
+
+  --color-header-inner-title: var(--color-card-label)
+
+}
+
+/* user-agent font-size is 16px, let's make it responsive */
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media(max-width: 970px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+}
+
+@media(max-width:700px) {
+  :root {
+    font-size: 75%; /* 12px */
+  }
+}
+
+@media(max-width: 590px) {
+  :root {
+    font-size: 62.25%; /* 10px */
+  }
+}
+
+/* tags styling */
+body {
+  background: var(--color-background);
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1rem Inter;
+  color: var(--color-text);
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* basic classes */
+.container {
+  width: min(1440px, 90vw);
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--color-hairline-in-dark);
+  margin: 1rem 0;
+}
+
+.separator.light {
+  background-color: #E1E3E5;
+}
+
+.flex {
+  display: flex;
+}

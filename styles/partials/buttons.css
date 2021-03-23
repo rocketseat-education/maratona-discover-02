@@ -1,0 +1,88 @@
+.button {
+  padding: 0.75rem 3rem;
+  border-radius: 0.313rem;
+  border: 0;
+
+  font-family: IBM Plex Sans;
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.625rem;
+  text-transform: uppercase;
+
+  transition: all .2s;
+
+  cursor:pointer;
+
+  display: inline-flex;
+  justify-content:center;
+  align-items: center;
+}
+
+button.button {
+  line-height: 1.5rem;
+}
+
+.button.orange {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.button.orange:hover {
+  background: #FA9C2D
+}
+
+.button.green {
+  background: var(--color-save);
+  color: var(--color-text);
+}
+
+.button.green:hover {
+  background: #3CC73C;
+}
+
+.button.gray {
+  color: var(--color-card-content);
+  background: var(--color-cancel);
+}
+
+.button.gray:hover {
+  background: #ECEEF0;
+}
+
+.button.red {
+  background: var(--color-delete);
+  color: var(--color-text);
+}
+
+.button.red:hover {
+  background: #FA3F38;
+}
+
+.button.white {
+  background: #FCFDFF;
+  border: 1px solid #E1E3E6;
+}
+
+.button.white:hover {
+  background: #F0F2F5;
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+}
+
+.button + .button {
+  margin-left: 1rem;
+}
+
+.actions .button {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  padding: 0;
+}
+
+.actions .button + button {
+  margin-left: 0.5rem;
+}

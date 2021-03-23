@@ -1,0 +1,277 @@
+#top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 13rem;
+  height: 3rem;
+}
+
+/* 
+ * notification
+/* -------------------------------------------------- */
+#notification {
+  display: flex;
+  align-items: center;
+
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+#notification img {
+  margin-right: 0.5rem; /* 8px of 16px root*/
+}
+
+/* 
+ * avatar
+/* -------------------------------------------------- */
+#avatar-profile {
+  display: flex;
+  align-items: center;
+  color: var(--color-white);
+  text-decoration: none;
+
+  font-family: IBM Plex Sans;
+  text-align: right;
+}
+
+#avatar-profile p {
+  font-size: 1.25rem; /* 20px of 16px root*/
+  line-height: 1.875rem; /*30px of 16px root*/
+  margin-right: 1.25rem;
+
+  font-weight: 600;
+}
+
+#avatar-profile span {
+  display: block;
+
+  font-weight: normal;
+  font-size: 0.875rem; /* 14px of 16px root*/
+  line-height: 1.5rem; /* 24px of 16px root*/
+
+  font-weight: 400;
+}
+
+#avatar-profile p span:hover {
+  text-decoration: underline;
+  color:var(--color-secondary);
+}
+
+#avatar-profile img {
+  width: 4rem; /* 64px of 16px root*/
+  height: 4rem; /* 64px of 16px root*/
+  border-radius: 50%;
+  border: 0.156rem solid #F1972C; /* 2.5px of 16px root*/
+}
+
+/* 
+ * summary
+/* -------------------------------------------------- */
+#summary {
+  margin-top: 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 
+ * summary info
+/* -------------------------------------------------- */
+#summary .info {
+  display:flex;
+  font-family: Inter;
+
+  margin-bottom: 2rem;
+}
+
+.info > div {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  
+  margin-right: 2.5rem; /* 40px of 16px root*/
+}
+
+.info > div > strong {
+  display: block;
+  
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.625rem; /* 26px of 16px root*/
+  
+}
+
+/* 
+ * summary button
+/* -------------------------------------------------- */
+#summary .button {
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+  margin-bottom: 2.5rem;
+}
+
+#summary .button span::before {
+  width: 2rem;
+  height: 2rem;
+  content: " "; 
+  background-color: var(--color-background);
+  opacity: 0.16;
+  border-radius: 0.313rem; /* 5px of 16px root*/
+
+  position: absolute;
+}
+
+#summary .button span {
+  width: 2rem;
+  height: 2rem;
+
+  margin-right: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#summary .button span img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* 
+ * main
+/* -------------------------------------------------- */
+main {
+  margin-top: -2.825rem;
+}
+
+
+/* 
+ * CARD
+/* -------------------------------------------------- */
+.card {
+  display: grid;
+  grid-template-columns: 5% 35% 20% 15% 15% 10%;
+  align-items: center;
+
+  margin-bottom:  0.5rem;
+
+  position: relative;
+
+  transition: all 0.2s;
+}
+
+.card:hover {
+  background: 
+  linear-gradient(90deg, rgba(250, 156, 45, 0.1) 0.45%, rgba(252, 253, 255, 0.1) 31.4%),
+    white;
+}
+
+.card::before {
+  content: ' ';
+  
+  width: .25rem;
+  height: 0%;
+  background-color: var(--color-secondary);
+
+  border-radius: .313rem 0 0 .313rem;
+
+  position: absolute;
+  top: 0;
+  left: -1px;
+
+  transition: all .2s;
+}
+
+.card:hover::before {
+  height:100%;
+}
+
+.card .column:last-child {
+  justify-self: flex-end;
+}
+
+.card .column > span {
+  display:block;
+
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 0.75rem; /* 12px of 16px root*/
+  text-transform: uppercase;
+
+  color: var(--color-card-label);
+}
+
+.progress .column p {
+  font-weight: 600;
+}
+
+.column.id {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  color: var(--color-card-label);
+}
+
+.column.name {
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+}
+
+.column.actions button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+@media(max-width:1390px) {
+  .card {
+    grid-template-columns: 5% 30% 20% 15% 17.25% 12.25%;
+  }
+}
+
+@media(max-width:970px) {
+  .card {
+    grid-template-columns: 31% 23% 13% 20.25% 12.25%;
+  }
+  
+  .column.id {
+    display: none;
+  }
+}
+
+@media(max-width:770px) {
+  .card {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "lt rt"
+    "lm rm"
+    "lb rb"
+    ;
+    gap: .5rem;
+  }
+
+  .column.id {
+    display: none;
+  }
+
+  .column.name {
+    grid-area: lt;
+  }
+  .column.deadline {
+    grid-area: lm;
+  }
+  .column.amount {
+    grid-area: lb;
+  }
+  .column.status {
+    justify-self: end;
+    grid-area: rt;
+  }
+  .column.actions{
+    grid-area: rb;
+  }
+}

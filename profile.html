@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>JobsCalc</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/profile.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body id="page-profile">
+    <header class="page-header inner">
+      <div class="container animate-up">
+        <a href="index.html" class="back">
+          <img src="./images/back.svg" alt="" />
+        </a>
+        <h1>Meu Perfil</h1>
+      </div>
+    </header>
+
+    <div class="container animate-up delay-2">
+      <aside class="card">
+        <img src="https://avatars.githubusercontent.com/u/17316392?s=460&u=6912a91a70bc89745a2079fdcdad3bc3ce370f13&v=4" alt="Jakeliny">
+        <h2>Jakeliny</h2>
+        <p>
+          O valor da sua hora é <br/>
+          <strong>R$ 75,00</strong>
+        </p>
+        <button class="button green" form="form-profile" type="submit">Salvar dados</button>
+      </aside>
+      <main>
+
+        <form id="form-profile">
+          <fieldset>
+            <legend>Dados do perfil</legend>
+            <div class="separator light"></div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="avatar">Link da foto</label>
+                <input 
+                placeholder="https://"
+                type="url" 
+                id="avatar" 
+                name="avatar" />
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Planejamento</legend>
+            <div class="separator light"> </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="monthly-budget">Quanto eu <br/>quero ganhar por mês?</label>
+                <input 
+                  type="amount"
+                  step="0.1" 
+                  id="monthly-budget" 
+                  name="monthly-budget" 
+                  placeholder="R$"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="hours-per-day">Quantas horas <br/>
+                  quero trabalhar por dia?</label>
+                <input 
+                  type="number"
+                  id="hours-per-day" 
+                  name="hours-per-day" />
+              </div>
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="days-per-week">Quantos dias <br/>quero
+                  trabalhar por semana?</label>
+                <input
+                  type="number"
+                  id="days-per-week" 
+                  name="days-per-week" />
+              </div>
+
+              <div class="input-wrapper">
+                <label for="vacation-per-year">Quantas semanas <br/>
+                  por ano você quer tirar férias?</label>
+                <input 
+                  type="number" 
+                  id="vacation-per-year" 
+                  name="vacation-per-year" />
+              </div>
+            </div>
+          </fieldset>
+    
+        </form>
+      </main>
+    </div>
+    <!-- end container -->
+  </body>
+</html>
+ 

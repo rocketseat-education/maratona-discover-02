@@ -1,0 +1,27 @@
+.page-header {
+  background: var(--color-primary);
+  width: 100vw;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.page-header.inner {
+  height: 5.5rem;
+  margin-bottom: 4rem;
+}
+
+.page-header.inner .container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.page-header.inner h1 {
+  margin: 0 auto;
+
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.625rem;
+
+  color: var(--color-header-inner-title);
+}

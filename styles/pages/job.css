@@ -1,0 +1,33 @@
+aside.card {
+  width: 22rem;
+
+  margin-left: 8rem;
+
+  text-align: center;
+
+  padding: 2.5rem 3.375rem;
+}
+
+aside > img {
+  margin-bottom: 1.5rem;
+}
+
+aside p {
+  margin-bottom: 1.75rem;
+
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+aside .button img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+aside .button + .button {
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+}

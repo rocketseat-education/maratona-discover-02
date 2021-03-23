@@ -1,0 +1,37 @@
+.card {
+  background: var(--color-text);
+  border-radius: 0.313rem;
+  border: 1px solid #E1E3E6;
+  color: #5A5A66;
+
+  padding: 1.5rem;
+
+  text-align: left;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+
+  border-radius: 2.5rem;
+  padding: 0.5rem 1.5rem;
+
+  font-weight: 500;
+  font-size: 0.875rem; /* 14px of 16px root*/
+  line-height: 1.625rem; /* 26px of 16px root*/
+
+  background-color: rgb(237, 237, 237);
+  
+}
+
+.progress .badge{
+  background: var(--color-badge-progress-background);
+  color: var(--color-badge-progress-text);
+}
+
+.done .badge {
+  background: var(--color-badge-done-background);
+  color: var(--color-badge-done-text);
+}

@@ -1,0 +1,59 @@
+form fieldset {
+  border: none;
+}
+
+form fieldset + fieldset {
+  margin-top: 3.5rem;
+}
+
+form fieldset legend {
+  color: var(--color-card-title);
+
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.625rem;
+}
+
+fieldset .separator {
+  margin-bottom: 2rem;
+}
+
+form .input-group {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+form .input-group .input-wrapper + .input-wrapper {
+  margin-left: 1.5rem;
+}
+
+label {
+  display: inline-block;
+
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+  color: #787880;
+
+  margin-bottom: 1rem;
+}
+
+input {
+  font-family: IBM Plex Sans;
+  font-weight: 500;
+
+  background: #FCFDFF;
+
+  border: 1px solid #E1E3E6;
+  border-radius: .313rem;
+
+  padding: 0.75rem 1.5rem;
+
+  width: 100%;
+
+  color: var(--color-card-title);
+}
+
+::placeholder {
+  color: #BFBFCC;
+}

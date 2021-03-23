@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#41414C" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <title>JobsCalc</title>
+
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/partials/page-header.css" />
+    <link rel="stylesheet" href="/styles/partials/cards.css" />
+    <link rel="stylesheet" href="/styles/partials/buttons.css" />
+    <link rel="stylesheet" href="/styles/partials/forms.css" />
+    <link rel="stylesheet" href="/styles/partials/animations.css" />
+    <link rel="stylesheet" href="/styles/pages/job.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body id="page-job">
+    <header class="page-header inner">
+      <div class="container animate-up">
+        <a href="index.html" class="back">
+          <img src="./images/back.svg" alt="" />
+        </a>
+        <h1>Adicionar Novo Job</h1>
+      </div>
+    </header>
+
+    <div class="container flex animate-up delay-2">
+      <main>
+        <form id="form-job">
+          <fieldset>
+            <legend>Dados do Job</legend>
+            <div class="separator light"></div>
+
+            <div class="input-wrapper">
+              <label for="name">Nome do Job</label>
+              <input type="text" id="name" name="name" />
+            </div>
+
+            <div class="input-group">
+              <div class="input-wrapper">
+                <label for="daily-hours">Quantas horas <br/>
+                  por dia vai dedicar ao job?</label>
+                <input 
+                  type="number"
+                  step="0.1" 
+                  id="daily-hours" 
+                  name="daily-hours"/>
+              </div>
+
+              <div class="input-wrapper">
+                <label for="total-hours">Estimativa de <br/>
+                  horas para esse Job?</label>
+                <input 
+                  type="number"
+                  id="total-hours" 
+                  name="total-hours" />
+              </div>
+            </div>
+          </fieldset>
+    
+        </form>
+      </main>
+      <aside class="card">
+        <img src="./images/money-gray.svg" alt="Imagem de Dinheiro">
+        <p>
+          Preencha os dados ao lado para
+          ver o valor do projeto
+        </p>
+        <div class="button-group">
+          <button 
+            class="button green" 
+            form="form-job" 
+            type="submit" 
+            title="Salvar Dados">Salvar</button>
+          <a 
+            href="index.html" 
+            class="button gray">
+            <img 
+              src="./images/trash-24.svg" 
+              alt="Cancelar cadastro" 
+              title="Cancelar cadastro">
+          </a>
+        </div>
+      </aside>
+      
+    </div>
+    <!-- end container -->
+  </body>
+</html>
+ 
