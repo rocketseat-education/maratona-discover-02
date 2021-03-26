@@ -24,14 +24,8 @@
     
   </head>
   <body id="page-job">
-    <header class="page-header inner">
-      <div class="container animate-up">
-        <a href="index.html" class="back">
-          <img src="./images/back.svg" alt="" />
-        </a>
-        <h1>Adicionar Novo Job</h1>
-      </div>
-    </header>
+    
+    <%- include('parts/page-header', { title: 'Adicionar novo job'}) %>
 
     <div class="container flex animate-up delay-2">
       <main>
@@ -70,7 +64,7 @@
         </form>
       </main>
       <aside class="card">
-        <img src="./images/money-gray.svg" alt="Imagem de Dinheiro">
+        <img src="/images/money-gray.svg" alt="Imagem de Dinheiro">
         <p>
           Preencha os dados ao lado para
           ver o valor do projeto
@@ -82,10 +76,10 @@
             type="submit" 
             title="Salvar Dados">Salvar</button>
           <a 
-            href="index.html" 
+            href="/" 
             class="button gray">
             <img 
-              src="./images/trash-24.svg" 
+              src="/images/trash-24.svg" 
               alt="Cancelar cadastro" 
               title="Cancelar cadastro">
           </a>
