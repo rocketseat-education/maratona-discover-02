@@ -1,6 +1,6 @@
-const Profile = require('../model/Profile')
+import { Profile } from "../model/Profile"
 
-module.exports = {
+export const ProfileController = {
     async index(req, res) {
       return res.render("profile", { profile: await Profile.get() })
     },

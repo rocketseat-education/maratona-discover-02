@@ -1,6 +1,6 @@
-const Database = require("../db/config");
+import { Database } from "src/shared/infra/database/sqlite/config";
 
-module.exports = {
+export const Job = {
   async get() {
     const db = await Database();
 

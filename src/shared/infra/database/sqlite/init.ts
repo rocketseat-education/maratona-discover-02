@@ -1,11 +1,11 @@
-const Database = require('./config')
+import { Database } from './config';
 
 const initDb = {
-   async init(){         
+    async init() {
 
-const db = await Database()
+        const db = await Database()
 
-await db.exec(`CREATE TABLE profile (
+        await db.exec(`CREATE TABLE profile (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT, 
     avatar TEXT, 
@@ -16,7 +16,7 @@ await db.exec(`CREATE TABLE profile (
     value_hour INT
 )`);
 
-await db.exec(`CREATE TABLE jobs (
+        await db.exec(`CREATE TABLE jobs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT, 
     daily_hours INT,
@@ -24,7 +24,7 @@ await db.exec(`CREATE TABLE jobs (
     created_at DATETIME
 )`)
 
-await db.run(`INSERT INTO profile (
+        await db.run(`INSERT INTO profile (
     name, 
     avatar, 
     monthly_budget, 
@@ -42,7 +42,7 @@ await db.run(`INSERT INTO profile (
      70
 );`)
 
-await db.run(`INSERT INTO jobs (
+        await db.run(`INSERT INTO jobs (
     name, 
     daily_hours,
     total_hours,
@@ -54,7 +54,7 @@ await db.run(`INSERT INTO jobs (
     1617514376018
 );`)
 
-await db.run(`INSERT INTO jobs (
+        await db.run(`INSERT INTO jobs (
     name, 
     daily_hours,
     total_hours,
@@ -66,7 +66,7 @@ await db.run(`INSERT INTO jobs (
     1617514376018
 );`)
 
-await db.close()
+        await db.close()
     }
 }
 

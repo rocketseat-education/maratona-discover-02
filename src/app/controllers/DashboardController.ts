@@ -1,8 +1,8 @@
-const Job = require('../model/Job')
-const JobUtils = require('../utils/JobUtils')
-const Profile = require('../model/Profile')
+import { JobUtils } from "src/shared/utils/JobUtils";
+import { Job } from "../model/Job";
+import { Profile } from "../model/Profile";
 
-module.exports = {
+export const DashboardController = {
   async index(req, res) {
     const jobs = await Job.get();
     const profile = await Profile.get();

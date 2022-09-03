@@ -1,8 +1,8 @@
-const Job = require('../model/Job')
-const JobUtils = require('../utils/JobUtils')
-const Profile = require('../model/Profile')
+import { JobUtils } from 'src/shared/utils/JobUtils';
+import { Job } from '../model/Job';
+import { Profile } from '../model/Profile';
 
-module.exports = {
+export const JobController = {
     create(req, res) {
       return res.render("job")
     },
@@ -22,7 +22,7 @@ module.exports = {
       const jobId = req.params.id
       const jobs = await Job.get()
 
-      const job = jobs.find(job => Number(job.id) === Number(jobId))
+      const job: any = jobs.find(job => Number(job.id) === Number(jobId))
 
       if (!job) {
         return res.send('Job not found!')
