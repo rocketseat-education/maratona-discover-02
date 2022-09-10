@@ -14,6 +14,8 @@ export class DashboardEntity {
         public profile: ProfileEntity,
         public jobs: JobEntity[]
     ) {
+        this.profile = profile;
+        this.jobs = jobs;
         this.jobsTotalHoursPerDay = 0
         this.statusCount = {
             progress: 0,

@@ -9,7 +9,15 @@ export class ProfileEntity {
         public hours_per_day: number,
         public vacation_per_year: number,
         public id?: number
-    ) { }
+    ) { 
+        this.name = name;
+        this.avatar = avatar;
+        this.monthly_budget = monthly_budget;
+        this.days_per_week = days_per_week;
+        this.hours_per_day = hours_per_day;
+        this.vacation_per_year = vacation_per_year;
+        this.id = id;
+    }
 
     public updateValueHour(): void {
         const weeksPerYear = 52

@@ -6,22 +6,12 @@ export const ProfileController = {
     },
 
     async update(req, res) {
-      // req.body para pegar os dados
       const data = req.body
-
-      // definir quantas semanas tem num ano: 52
       const weeksPerYear = 52
-
-      // remover as semanas de férias do ano, para pegar quantas semanas tem em 1 mês
-      const weeksPerMonth = (weeksPerYear - data["vacation_per_year"] ) / 12
-      
-      // total de horas trabalhadas na semana
+      const weeksPerMonth = (weeksPerYear - data["vacation_per_year"] ) / 12      
       const weekTotalHours  = data["hours_per_day"] * data["days_per_week"]
-
-      // horas trabalhadas no mês
       const monthlyTotalHours = weekTotalHours * weeksPerMonth
 
-      // qual será o valor da minha hora?
       const valueHour = data["monthly_budget"] / monthlyTotalHours
 
       const profile = await Profile.get()
