@@ -10,8 +10,8 @@ export const JobController = {
     async save(req, res) {
       await Job.create({
         name: req.body.name,
-        "daily-hours": req.body["daily-hours"], 
-        "total-hours": req.body["total-hours"], 
+        "daily_hours": req.body["daily_hours"], 
+        "total_hours": req.body["total_hours"], 
         created_at: Date.now()
       });     
 
@@ -30,7 +30,7 @@ export const JobController = {
 
       const profile = await Profile.get()
 
-      job.budget = JobUtils.calculateBudget(job, profile["value-hour"])
+      job.budget = JobUtils.calculateBudget(job, profile["value_hour"])
 
       return res.render("job-edit", { job })
     },
@@ -40,8 +40,8 @@ export const JobController = {
 
       const updatedJob = {
         name: req.body.name,
-        "total-hours": req.body["total-hours"], 
-        "daily-hours": req.body["daily-hours"], 
+        "total_hours": req.body["total_hours"], 
+        "daily_hours": req.body["daily_hours"], 
       }      
 
       await Job.update(updatedJob, jobId)

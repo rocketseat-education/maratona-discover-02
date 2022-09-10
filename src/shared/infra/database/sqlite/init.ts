@@ -33,8 +33,8 @@ const initDb = {
     vacation_per_year,
     value_hour
  ) VALUES (
-     "jakeliny",
-     "https://avatars.githubusercontent.com/u/17316392",
+     "joao",
+     "https://avatars.githubusercontent.com/u/57682216?v=4",
      3000,
      5,
      5,

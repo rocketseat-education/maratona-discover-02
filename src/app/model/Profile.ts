@@ -11,11 +11,11 @@ export const Profile = {
       return {
         name: data.name,
         avatar: data.avatar,
-        "monthly-budget": data.monthly_budget,
-        "days-per-week": data.days_per_week,
-        "hours-per-day": data.hours_per_day,
-        "vacation-per-year": data.vacation_per_year,
-        "value-hour": data.value_hour
+        "monthly_budget": data.monthly_budget,
+        "days_per_week": data.days_per_week,
+        "hours_per_day": data.hours_per_day,
+        "vacation_per_year": data.vacation_per_year,
+        "value_hour": data.value_hour
       };
     },
 
@@ -25,11 +25,11 @@ export const Profile = {
       db.run(`UPDATE profile SET
       name = "${newData.name}",
       avatar = "${newData.avatar}",
-      monthly_budget = ${newData["monthly-budget"]},
-      days_per_week = ${newData["days-per-week"]},
-      hours_per_day = ${newData["hours-per-day"]},
-      vacation_per_year = ${newData["vacation-per-year"]},
-      value_hour = ${newData["value-hour"]}
+      monthly_budget = ${newData["monthly_budget"]},
+      days_per_week = ${newData["days_per_week"]},
+      hours_per_day = ${newData["hours_per_day"]},
+      vacation_per_year = ${newData["vacation_per_year"]},
+      value_hour = ${newData["value_hour"]}
       `)
 
       await db.close()

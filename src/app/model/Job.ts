@@ -11,8 +11,8 @@ export const Job = {
     return jobs.map((job) => ({
       id: job.id,
       name: job.name,
-      "daily-hours": job.daily_hours,
-      "total-hours": job.total_hours,
+      "daily_hours": job.daily_hours,
+      "total_hours": job.total_hours,
       created_at: job.created_at,
     }));
   },
@@ -22,8 +22,8 @@ export const Job = {
 
     await db.run(`UPDATE jobs SET 
     name = "${updatedJob.name}",
-    daily_hours = ${updatedJob["daily-hours"]},
-    total_hours = ${updatedJob["total-hours"]}
+    daily_hours = ${updatedJob["daily_hours"]},
+    total_hours = ${updatedJob["total_hours"]}
     WHERE id = ${jobId}
     `)
 
@@ -48,8 +48,8 @@ export const Job = {
       created_at
     ) VALUES (
       "${newJob.name}",
-      ${newJob["daily-hours"]},
-      ${newJob["total-hours"]},
+      ${newJob["daily_hours"]},
+      ${newJob["total_hours"]},
       ${newJob.created_at}
     )`)
 

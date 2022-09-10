@@ -34,7 +34,7 @@
         <h2><%= profile.name %> </h2>
         <p>
           O valor da sua hora é <br/>
-          <strong>R$ <%= profile["value-hour"].toFixed(2).replace(".", ",") %> </strong>
+          <strong>R$ <%= profile["value_hour"].toFixed(2).replace(".", ",") %> </strong>
         </p>
         <button class="button green" form="form-profile" type="submit">Salvar dados</button>
       </aside>
@@ -76,46 +76,46 @@
 
             <div class="input-group">
               <div class="input-wrapper">
-                <label for="monthly-budget">Quanto eu <br/>quero ganhar por mês?</label>
+                <label for="monthly_budget">Quanto eu <br/>quero ganhar por mês?</label>
                 <input 
                   type="amount"
                   step="0.1" 
-                  id="monthly-budget" 
-                  name="monthly-budget" 
+                  id="monthly_budget" 
+                  name="monthly_budget" 
                   placeholder="R$"
-                  value="<%= profile["monthly-budget"] %>"/>
+                  value="<%= profile["monthly_budget"] %>"/>
               </div>
 
               <div class="input-wrapper">
-                <label for="hours-per-day">Quantas horas <br/>
+                <label for="hours_per_day">Quantas horas <br/>
                   quero trabalhar por dia?</label>
                 <input 
                   type="number"
-                  id="hours-per-day" 
-                  name="hours-per-day"
-                  value="<%= profile["hours-per-day"] %>" />
+                  id="hours_per_day" 
+                  name="hours_per_day"
+                  value="<%= profile["hours_per_day"] %>" />
               </div>
             </div>
 
             <div class="input-group">
               <div class="input-wrapper">
-                <label for="days-per-week">Quantos dias <br/>quero
+                <label for="days_per_week">Quantos dias <br/>quero
                   trabalhar por semana?</label>
                 <input
                   type="number"
-                  id="days-per-week" 
-                  name="days-per-week"
-                  value="<%= profile["days-per-week"] %>" />
+                  id="days_per_week" 
+                  name="days_per_week"
+                  value="<%= profile["days_per_week"] %>" />
               </div>
 
               <div class="input-wrapper">
-                <label for="vacation-per-year">Quantas semanas <br/>
+                <label for="vacation_per_year">Quantas semanas <br/>
                   por ano você quer tirar férias?</label>
                 <input 
                   type="number" 
-                  id="vacation-per-year" 
-                  name="vacation-per-year"
-                  value="<%= profile["vacation-per-year"] %>" />
+                  id="vacation_per_year" 
+                  name="vacation_per_year"
+                  value="<%= profile["vacation_per_year"] %>" />
               </div>
             </div>
           </fieldset>

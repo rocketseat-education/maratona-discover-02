@@ -25,20 +25,20 @@ export const DashboardController = {
       statusCount[status] += 1;
     
       // total de horas por dia de cada Job em progresso
-      jobTotalHours = status == 'progress' ? jobTotalHours + Number(job['daily-hours']) : jobTotalHours
+      jobTotalHours = status == 'progress' ? jobTotalHours + Number(job['daily_hours']) : jobTotalHours
 
       return {
         ...job,
         remaining,
         status,
-        budget: JobUtils.calculateBudget(job, profile["value-hour"]),
+        budget: JobUtils.calculateBudget(job, profile["value_hour"]),
       };
     });
 
     // qtd de horas que quero trabalhar dia (PROFILE)
     // MENOS 
     // quatidade de horas/dia de cada job em progress
-    const freeHours = profile["hours-per-day"] - jobTotalHours;
+    const freeHours = profile["hours_per_day"] - jobTotalHours;
 
     return res.render("index", { jobs: updatedJobs, profile: profile, statusCount: statusCount, freeHours: freeHours });
   },
